@@ -8,6 +8,7 @@ int main (void){
     }
     printf("Digite o seu nome:/n");
     scanf("%[^\n]", nome); //se usar só %s, ele vai parar quando. Usando %[^\n], o computador espera até digitar enter
-    free();
+    printf("Nome digitado: %s", nome);
+    free(nome);
     return 0;
 }
