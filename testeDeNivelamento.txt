@@ -1,0 +1,73 @@
+#**Atividade referente ao teste de nivelamento solicitado em sala de aula**
+---
+
+####Questão 1
+Implemente uma função que receba como parâmetro um vetor de números inteiros (vet) de tamanho
+n e inverta a ordem dos elementos armazenados nesse vetor.
+*Resposta:* Não consegui desenvolver, vou procurar o monitor
+
+####Questão 2
+O que faz o seguinte programa? E qual sua saída?
+
+# include < stdio .h >
+int f (int mat [3][3]) {
+return ( mat [0][0]* mat [1][1]* mat [2][2]) + ( mat [0][1]* mat [1][2]* mat [2][0]) + (
+mat [0][2]* mat [1][0]* mat [2][1]) - ( mat [0][1]* mat [0][1]* mat [2][2]) - ( mat
+[0][0]* mat [1][2]* mat [2][1]) - ( mat [0][2]* mat [1][1]* mat [2][0]) ;
+}
+int main ( void ) {
+int m [3][3]={{0 ,1 ,0} ,{3 ,1 , -1} ,{4 ,0 ,1}};
+int de = f ( m ) ;
+printf (" Resultado = \t %d", de ) ;
+return 0;
+}
+
+*Resposta:* Não consegui desenvolver, vou procurar o monitor
+
+####Questão 3
+**Identifique os erros de compilacão que seriam detectados no seguinte programa se eles existirem:**
+
+# include < stdio .h >
+int main ( ) {
+int N_ant , N_prox , N , N_atual
+N_ant = N_atual =1;
+for( i =1 ,i <= N , i ++) {
+N_prox = N_ant + N_atual ;
+N_ant = N_atual ;
+N_atual = N_prox ;
+printf ("Fim do laco !\n") ;
+return
+}
+
+*Resposta:* Identifiquei os seguintes erros:
+ - ao declarar as variáveis, faltou um ponto e vírgula (terceira linha);
+ - está faltando uma chave para fechar a função;
+ - a variável i do for não foi declarada inicialmente;
+ - faltou ponto e vígula no return (era para ser return 0;);
+
+####Questão 4
+**Escreva uma função que receba dois números positivos por parâmetro e retorne a soma dos N números
+inteiros existentes entre eles.**
+*Resposta:* Não consegui desenvolver, vou procurar o monitor
+
+####Questão 5
+Qual a sa´ıda do seguinte programa?
+# include < stdio .h >
+int main ( ) {
+int i ;
+for ( i =1 ; i <= 100 ; i *=100) {
+if ( i ==30 ) {
+break ;
+}
+else {
+printf ("%2d\n" ,2* i ) ;
+}
+}
+printf ("Fim do laco !\n") ;
+return 0;
+}
+
+*Resposta:* a saída vai ser "2", "200" e "Fim do laco !"
+---
+
+*Obs:* tenho muita dificuldade na linguagem C, mas estou fazendo um curso para tentar aprender.
