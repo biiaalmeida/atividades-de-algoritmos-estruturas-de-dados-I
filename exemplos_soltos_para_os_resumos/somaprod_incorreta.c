@@ -2,7 +2,7 @@
 
 void somaprod (int a, int b, int c, int d){
     c = a + b;
-    d = a + b;
+    d = a * b;
 }
 
 int main (void){
@@ -12,3 +12,5 @@ int main (void){
 
     return 0;
 }
+
+int a;
