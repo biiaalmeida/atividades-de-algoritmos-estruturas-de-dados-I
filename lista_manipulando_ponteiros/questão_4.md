@@ -14,3 +14,5 @@ calcula_hexagono para calcular a área e o perímetro de um hexágono de lado l
 informado pelo usuário.
 
 ###### *Resposta:* 
+
+![Alt text](image-9.png)
