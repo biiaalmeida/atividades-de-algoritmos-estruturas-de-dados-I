@@ -18,7 +18,7 @@ gostaram do produto.
 int main(){
     //definindo quantas pessoas serão entrevistadas
     int qnt_ent, i;
-    printf("Digite a quantidade de pessoas a serem entrvistadas:\n");
+    printf("Digite a quantidade de pessoas a serem entrevistadas:\n");
     scanf("%d", &qnt_ent);
 
     //alocando memória dinamicamente para o array de sexo e opinião
@@ -32,21 +32,22 @@ int main(){
 
     //leitura das respostas
     for(i = 0; i < qnt_ent; i++){
-    printf("Entrevistado: %d\n", i + 1);
+        printf("Entrevistado: %d\n", i + 1);
 
         //leitura do sexo
-        printf("Digite o seu sexo (F ou M):\n);
-        scanf("%c", &sexo[i]);
+        printf("Digite o seu sexo (F ou M): ");
+        scanf(" %c", &sexo[i]);
         
-        /*leitura das opiniões*/
-        printf("Digite sua opinião (Gostei ou Não gostei)");
+        //leitura das opiniões
+        printf("Digite sua opiniao (Gostei ou Nao gostei): ");
         scanf("%s", opiniao[i]);
-    }    
+    }   
 
     //Exibição das respostas armazenadas
     printf("\nRespostas armazenadas:\n");
-    for (int i = 0; i < qnt_ent; i++) {
-        printf("Entrevistado %d - Sexo: %c, Opinião: %s\n", i + 1, sexo[i], opiniao[i]);
+    for (int i = 0; i < qnt_ent; i++) 
+    {
+        printf("Entrevistado %d - Sexo: %c, Opiniao: %s\n", i + 1, sexo[i], opiniao[i]);
     }
 
     // Liberação da memória 
