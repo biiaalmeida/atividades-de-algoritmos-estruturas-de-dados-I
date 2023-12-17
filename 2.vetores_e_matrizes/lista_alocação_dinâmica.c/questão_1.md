@@ -13,3 +13,5 @@ c) determine a porcentagem de pessoas do sexo masculino que responderam que não
 gostaram do produto.  
 
 ###### *Resposta:* 
+O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
+![Alt text](image.png)
