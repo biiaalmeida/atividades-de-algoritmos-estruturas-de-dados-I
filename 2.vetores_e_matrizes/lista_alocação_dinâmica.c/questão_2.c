@@ -62,5 +62,11 @@ int main(){
     float x = (100 * aprovados)/10;
     printf("A quantidade de aprovados foi: %2.f%%", x);
 
+    free(prova_alunos);
+    free(gabarito);
+    free(resultado);
+     
     return 0;
+
+
 }       
