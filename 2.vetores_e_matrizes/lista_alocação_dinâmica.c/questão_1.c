@@ -19,7 +19,7 @@ int main(){
 
     //alocando memória para cada string de opinião
     for(i = 0; i < qnt_ent; i++){
-        opiniao[i] = (char*)malloc(20*sizeof(char));
+        opiniao[i] = (char*)malloc(10*sizeof(char));
     }
 
     //leitura das respostas
