@@ -9,7 +9,6 @@ struct aluno {
     };
 
 int main(){
-    
     struct aluno estudante;
     printf("Digite o nome do aluno:\n");
     scanf(" %[^\n]", estudante.nome); //usa -> em ponteiros
@@ -22,5 +21,4 @@ int main(){
     
     free(estudante);
     return 0;
-    
 }

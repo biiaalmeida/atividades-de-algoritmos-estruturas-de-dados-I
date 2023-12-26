@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 struct aluno {
-        char nome [20];
-        int idade;
-        int matricula; 
-        char email [50];
-    };
+    char nome [20];
+    int idade;
+    int matricula; 
+    char email [50];
+};
     
 void preenche(struct aluno * estudante){
     printf("Digite o nome do aluno:\n");
