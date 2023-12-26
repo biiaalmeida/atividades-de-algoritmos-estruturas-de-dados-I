@@ -9,3 +9,5 @@ b) a porcentagem de aprovação, sabendo-se que a nota mínima para ser aprovado
 
 ###### *Resposta:* 
 O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
+
+![Alt text](image-1.png)
