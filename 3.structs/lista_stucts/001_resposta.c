@@ -4,10 +4,10 @@ a) Escreva uma função que receba como parâmetro o endereço de uma estrutura 
 e preencha seus campos com valores fornecidos pelo usuário via teclado.  OK
 b) Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
 e imprima os valores dos seus campos.  OK
-c) Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario.  
+c) Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario. OK  
 d) Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Funcionario e
 imprima o cargo e salário do Funcionario com maior salário e o cargo e salário do funcionário
-com o menor salário. */
+com o menor salário. FALTA*/
 
 #include <stdio.h>
 #include <stdlib.h>
