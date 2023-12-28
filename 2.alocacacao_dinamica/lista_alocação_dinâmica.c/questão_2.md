@@ -1,4 +1,4 @@
-### Questão 1
+### Questão 2
 ---
 Escreva um programa para corrigir provas de múltipla escolha. Cada prova tem N
 questões e cada questão vale 10/N pontos. Os primeiros dados a serem lidos são o número de
