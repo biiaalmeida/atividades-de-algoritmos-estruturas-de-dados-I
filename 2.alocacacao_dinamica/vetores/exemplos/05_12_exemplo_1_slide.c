@@ -4,8 +4,7 @@
 
 int main(void){
 
-    int tamanho = 5;
-    int contador;
+    int tamanho = 5, contador;
     int *vetor = (int *) malloc(tamanho * sizeof(int)); 
     
     if (vetor == NULL){ // verifica se a alocação foi bem sucedida
