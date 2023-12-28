@@ -19,3 +19,5 @@ int main(void) {
 
  return 0;
 }
+
+//Resposta: a saída vai ser: 11 20 10 30
