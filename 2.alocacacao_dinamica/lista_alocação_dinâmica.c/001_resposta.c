@@ -2,12 +2,26 @@
 #include <stdlib.h>
 #include <string.h> 
 
+void leitura (int i, char*sexo, char**opiniao){
+        
+        printf("Entrevistado: %d\n", i + 1);
+
+        //leitura do sexo
+        printf("Digite o seu sexo (F ou M): ");
+        scanf(" %c", &sexo[i]);
+        
+        //leitura das opiniões
+        printf("Digite sua opiniao (sim ou nao): ");
+        scanf("%s", opiniao[i]);
+}
+    
 int main(){
+
     int fem = 0;
     int fem_gostou = 0;
     int masc = 0;
     int mas_n = 0;
-
+    
     //definindo quantas pessoas serão entrevistadas
     int qnt_ent, i;
     printf("Digite a quantidade de pessoas a serem entrevistadas:\n");
@@ -24,15 +38,7 @@ int main(){
 
     //leitura das respostas
     for(i = 0; i < qnt_ent; i++){
-        printf("Entrevistado: %d\n", i + 1);
-
-        //leitura do sexo
-        printf("Digite o seu sexo (F ou M): ");
-        scanf(" %c", &sexo[i]);
-        
-        //leitura das opiniões
-        printf("Digite sua opiniao (sim ou nao): ");
-        scanf("%s", opiniao[i]);
+        leitura(i, sexo, opiniao);
     }   
 
     //Cálculo da porcentagem feminina
@@ -54,7 +60,6 @@ int main(){
             } 
         }    
     }
-
 
     //Exibição da porcentagem feminina que gostou
     if (fem > 0) {
@@ -80,4 +85,4 @@ int main(){
     free(opiniao);
 
     return 0;
-}       
+}
