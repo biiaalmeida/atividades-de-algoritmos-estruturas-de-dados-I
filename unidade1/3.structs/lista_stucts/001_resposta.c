@@ -12,6 +12,7 @@ com o menor salário. FALTA*/
 #include <stdio.h>
 #include <stdlib.h>
 
+//criação da struct que armazena os dados de um funcionário
 typedef struct funcionario {
    char nome[20];
    float salario;
@@ -19,8 +20,11 @@ typedef struct funcionario {
    char cargo[20];
 }Funcionario;
 
+/*função que cumpre com o item A solicitado: Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
+e preencha seus campos com valores fornecidos pelo usuário via teclado.*/
 void preencha(Funcionario * empregado){
-    printf("Digite o nome do funcionário:\n");
+    printf("Informações dos funcionários:\n");
+    printf("Digite o nome:\n");
     scanf(" %[^\n]", empregado->nome); 
     printf("Digite o salário: \n");
     scanf("%f", &empregado->salario);
@@ -31,19 +35,27 @@ void preencha(Funcionario * empregado){
 
 }
 
+/*função que cumpre com o item B solicitado: Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
+e imprima os valores dos seus campos.*/
 void imprima(Funcionario * empregado){
     //b) Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario e imprima os valores dos seus campos.  
-    printf("\nRespostas:\n Nome: %s \n Salário: %f \n Identificador: %d \n Cargo: %s", empregado->nome, empregado->salario, empregado->identificador, empregado->cargo);
+    printf("\nRespostas fornecidas:\n");
+    printf("Nome: %s\n", empregado->nome);
+    printf("Salário: %f\n", empregado->salario);
+    printf("Identificador: %d\n", empregado->identificador);
+    printf("Cargo: %s\n", empregado->cargo);
 }
 
+/*funcção que cumpre com o item C solicitado: Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario.*/
 void altera_salario(Funcionario * empregado, float * novo_sal, int cont){
     empregado->salario = novo_sal[cont];
 }
 
+//função que imprime os dados alterados
 void imprima_novo (Funcionario * empregado, float * novo_sal){
     printf("\n Resposta\n");
     printf("Nome: %s \n", empregado->nome);
-    printf("Salário: %f", novo_sal);
+    printf("Salário: %f \n", novo_sal[0]);
     printf("Identificador: %d \n", empregado->identificador);
     printf("Cargo: %s \n", empregado->cargo);
 
@@ -54,7 +66,7 @@ int main(){
    int quantidade_func = 2;
 
    //armmazenando memória para o vetor funcionario
-   struct funcionario * empregado = (struct funcionario*)malloc(quantidade_func*sizeof(struct funcionario));
+   Funcionario * empregado = (Funcionario*)malloc(quantidade_func * sizeof(Funcionario));
 
     int contador;
     // preenchendo os dados dos funcionarios
@@ -79,5 +91,6 @@ int main(){
 
    preencha(empregado);
    free(empregado);
+   return 0;
 
 }
