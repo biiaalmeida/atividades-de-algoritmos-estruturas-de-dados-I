@@ -46,7 +46,7 @@ void imprima(Funcionario * empregado){
     printf("Cargo: %s\n", empregado->cargo);
 }
 
-/*funcção que cumpre com o item C solicitado: Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario.*/
+//funcção que cumpre com o item C solicitado: Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario.
 void altera_salario(Funcionario * empregado, float * novo_sal, int cont){
     empregado->salario = novo_sal[cont];
 }
@@ -79,7 +79,7 @@ int main(){
         imprima(&empregado[contador]);
     }
     
-    //alocando memória para o vetor novo_sal
+    /*alocando memória para o vetor novo_sal
     float * novo_sal = (float*) malloc(quantidade_func*sizeof(float)); // é um vetor aqui
 
     printf("\n Seu salário modificado: \n");
@@ -87,9 +87,8 @@ int main(){
 
     //atualizando os dados 
     printf("\n Dados atualizados: \n");
-    imprima_novo(empregado, novo_sal);
+    imprima_novo(empregado, novo_sal);*/
 
-   preencha(empregado);
    free(empregado);
    return 0;
 
