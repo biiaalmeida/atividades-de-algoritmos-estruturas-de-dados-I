@@ -38,8 +38,8 @@ void imprima(Funcionario * empregado, int quantidade_func){
 }
 
 //funcção que cumpre com o item C solicitado: Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario.
-void altera_salario(Funcionario * empregado, float * novo_sal, int cont){
-    empregado->salario = novo_sal[cont];
+void altera_salario(Funcionario * empregado, float novo_sal){
+    empregado->salario = novo_sal;
 }
 
 /*as funções a seguir cumprem com o item d: Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Funcionario e
