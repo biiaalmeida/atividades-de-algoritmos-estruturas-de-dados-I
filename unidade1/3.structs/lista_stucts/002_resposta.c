@@ -18,6 +18,9 @@ typedef struct pessoa{
 }Pessoa;
 
 int main(){
+    //quantidade de pessoas a serem computados
     int quantidadePessoas = 2;
+
+    //alocando memória para o vetor Pessoa
     Pessoa * individuo = (Pessoa*)malloc(quantidadePessoas * sizeof(Pessoa));
 }
