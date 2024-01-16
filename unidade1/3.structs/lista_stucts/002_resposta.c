@@ -1,13 +1,3 @@
-/*Crie um tipo estruturado para armazenar dados de uma pessoa. Uma estrutura deste tipo possui os
-seguintes campos: nome da pessoa, numero do documento e idade.   OK
-a) Escreva uma função que receba como parâmetro o endereçoo de uma estrutura do tipo Pessoa e
-preencha seus campos com valores fornecidos pelo usuário via teclado. OK
-b) Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Pessoa e
-imprima os valores dos seus campos.   OK
-c) Implemente uma função para realizar uma atualização da idade de uma estrutura do tipo Pessoa.  OK 
-d) Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Pessoa e imprima
-o nome da Pessoa mais velha e mais nova */
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -46,6 +36,8 @@ void atualizaIdade(Pessoa * individuo, int nova_idade){
     individuo->idade = nova_idade;
 }
 
+/*as funções a seguir cumprem o item D solicitado: Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Pessoa e imprima
+o nome da Pessoa mais velha e mais nova */
 void pessoaMaisVelha(Pessoa * individuo, int quantidadePessoas){
     int contador;
     int maior_idade = individuo[0].idade;
@@ -57,6 +49,19 @@ void pessoaMaisVelha(Pessoa * individuo, int quantidadePessoas){
         }
     }
     printf("\n A pessoa mais velha é %s que tem %d anos", individuo[id].nome, maior_idade);
+}
+
+void pessoaMaisNova(Pessoa * individuo, int quantidadePessoas){
+    int contador;
+    int menor_idade = individuo[0].idade;
+    int id = 0;
+    for(contador = 0; contador < quantidadePessoas; contador++){
+        if (individuo[contador].idade < menor_idade){
+            menor_idade = individuo[contador].idade;
+            id = contador;
+        }
+    }
+    printf("\n A pessoa mais nova é %s que tem %d anos", individuo[id].nome, menor_idade);
 }
 
 int main(){
@@ -83,4 +88,13 @@ int main(){
         divisoria();
     }
 
+    // exibindo a pessoa mais velha e a mais nova
+    printf("Pessoa mais velha e mais nova:\n");
+    divisoria();
+    pessoaMaisVelha(individuo, quantidadePessoas);
+    pessoaMaisNova(individuo, quantidadePessoas);
+
+    //liberando a memória alocada
+    free(individuo);
+    return 0;
 }
