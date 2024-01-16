@@ -1,14 +1,3 @@
-/*Crie um tipo estruturado para armazenar dados de um funcionário. Uma estrutura deste tipo possui
-os seguintes campos: nome, salário, identificador e cargo.  
-a) Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
-e preencha seus campos com valores fornecidos pelo usuário via teclado.  OK
-b) Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
-e imprima os valores dos seus campos.  OK
-c) Implemente uma função para realizar uma alteração no salário de uma estrutura do tipo Funcionario. OK  
-d) Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Funcionario e
-imprima o cargo e salário do Funcionario com maior salário e o cargo e salário do funcionário
-com o menor salário. FALTA*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,28 +9,30 @@ typedef struct funcionario {
    char cargo[20];
 }Funcionario;
 
+void divisoria(){
+    printf("--------------------------------------------------------------\n");
+}
+
 /*função que cumpre com o item A solicitado: Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
 e preencha seus campos com valores fornecidos pelo usuário via teclado.*/
 void preencha(Funcionario * empregado){
-    printf("Informações dos funcionários:\n");
-    printf("Digite o nome:\n");
+    printf("Digite o nome: ");
     scanf(" %[^\n]", empregado->nome); 
-    printf("Digite o salário: \n");
+    printf("Digite o salário: ");
     scanf("%f", &empregado->salario);
-    printf("Digite o identificador:\n");
+    printf("Digite o identificador: ");
     scanf("%d", &empregado->identificador);
-    printf("Digite o seu cargo:\n");
+    printf("Digite o seu cargo: ");
     scanf(" %[^\n]", empregado->cargo);
 
 }
 
 /*função que cumpre com o item B solicitado: Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario
 e imprima os valores dos seus campos.*/
-void imprima(Funcionario * empregado){
+void imprima(Funcionario * empregado, int quantidade_func){
     //b) Escreva uma função que receba como parâmetro o endereço de uma estrutura do tipo Funcionario e imprima os valores dos seus campos.  
-    printf("\nRespostas fornecidas:\n");
     printf("Nome: %s\n", empregado->nome);
-    printf("Salário: %f\n", empregado->salario);
+    printf("Salário: %.2f\n", empregado->salario);
     printf("Identificador: %d\n", empregado->identificador);
     printf("Cargo: %s\n", empregado->cargo);
 }
@@ -51,45 +42,67 @@ void altera_salario(Funcionario * empregado, float * novo_sal, int cont){
     empregado->salario = novo_sal[cont];
 }
 
-//função que imprime os dados alterados
-void imprima_novo (Funcionario * empregado, float * novo_sal){
-    printf("\n Resposta\n");
-    printf("Nome: %s \n", empregado->nome);
-    printf("Salário: %f \n", novo_sal[0]);
-    printf("Identificador: %d \n", empregado->identificador);
-    printf("Cargo: %s \n", empregado->cargo);
-
+/*as funções a seguir cumprem com o item d: Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Funcionario e
+imprima o cargo e salário do Funcionario com maior salário e o cargo e salário do funcionário com o menor salário*/
+void maiorSalario(Funcionario * empregado, int quantidade_func){
+    int contador;
+    float maiorSal = empregado[0].salario;
+    int id;
+    for (contador = 0; contador < quantidade_func; contador++){
+        if (empregado[contador].salario > maiorSal){
+            maiorSal = empregado[contador].salario;
+            id = contador;
+        }
+    }
+    printf("\nO maior salario e de %.2f do funcionario com cargo %s\n", maiorSal, empregado[id].cargo);
 }
+
+void menorSalario(Funcionario * empregado, int quantidade_func){
+    int contador;
+    float menorSal = empregado[0].salario;
+    int id;
+    for (contador = 0; contador < quantidade_func; contador++){
+        if (empregado[contador].salario < menorSal){
+            menorSal = empregado[contador].salario;
+            id = contador;
+        }
+    }
+    printf("O menor salario e de %.2f do funcionario com cargo %s\n", menorSal, empregado[id].cargo);
+}
+
 
 int main(){
    //lendo a quantidade de funcionários a serem computados
-   int quantidade_func = 2;
+   int quantidade_func = 4;
 
    //armmazenando memória para o vetor funcionario
    Funcionario * empregado = (Funcionario*)malloc(quantidade_func * sizeof(Funcionario));
 
     int contador;
+
     // preenchendo os dados dos funcionarios
+    printf("Informações dos funcionários:\n");
+    divisoria();
     for (contador = 0; contador < quantidade_func; contador++){
         preencha(&empregado[contador]);
+        divisoria();
     }
 
     printf("Exibindo os dados dos funcionarios:\n");
+    divisoria();
     for (contador = 0; contador < quantidade_func; contador++){
-        imprima(&empregado[contador]);
+        imprima(&empregado[contador], quantidade_func);
+        divisoria();
     }
-    
-    /*alocando memória para o vetor novo_sal
-    float * novo_sal = (float*) malloc(quantidade_func*sizeof(float)); // é um vetor aqui
 
-    printf("\n Seu salário modificado: \n");
-    scanf("%f", &novo_sal[1]);
+    printf("Funcionarios de maior salario e menor salario: \n");
+    divisoria();
+    maiorSalario(empregado, quantidade_func);
+    menorSalario(empregado, quantidade_func);
+    divisoria();
 
-    //atualizando os dados 
-    printf("\n Dados atualizados: \n");
-    imprima_novo(empregado, novo_sal);*/
-
-   free(empregado);
-   return 0;
+    //liberando a memoria alocada
+    free(empregado);
+    return 0;
 
 }
