@@ -1,0 +1,1 @@
+diferença entre structs e union: na união, apenas o último valor é armazenado na memória. Já em structs, armazena todos os valores.
