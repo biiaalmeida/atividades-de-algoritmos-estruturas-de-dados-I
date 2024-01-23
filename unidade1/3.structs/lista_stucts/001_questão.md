@@ -10,3 +10,7 @@ c) Implemente uma função para realizar uma alteração no salário de uma estr
 d) Escreva uma função que receba como parâmetro um vetor de estruturas do tipo Funcionario e
 imprima o cargo e salário do Funcionario com maior salário e o cargo e salário do funcionário
 com o menor salário.  
+
+###### *Resposta:* 
+O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
+![Alt text](image.png)

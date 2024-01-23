@@ -5,4 +5,5 @@ gênero deve ser armazenado como um union com os valores MASCULINO e FEMININO. O
 deve ler os dados de uma pessoa e imprimir os dados da pessoa.
 
 ###### *Resposta:* 
+O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
 ![Alt text](image.png)

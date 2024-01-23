@@ -104,5 +104,4 @@ int main(){
     //liberando a memoria alocada
     free(empregado);
     return 0;
-
 }

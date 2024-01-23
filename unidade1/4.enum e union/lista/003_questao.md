@@ -5,3 +5,4 @@ tipo deve ser armazenado como uma union que armazena um dos tipos: ALIMENTO, BEB
 ELETRONICO. O programa deve ler os dados de um produto e imprimir os dados do produto.
 
 ###### *Resposta:* 
+O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
