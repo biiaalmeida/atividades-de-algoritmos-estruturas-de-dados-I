@@ -52,7 +52,7 @@ void preenche(Produto * p){
 
 void imprime(Produto * p){
     printf("Nome: %s\n", p->nome);
-    printf("Preço: %f\n", p->preco);
+    printf("Preço: %.2f\n", p->preco);
     printf("Tipo: %s\n", p->var_tipo.ALIMENTO);
 
 }
