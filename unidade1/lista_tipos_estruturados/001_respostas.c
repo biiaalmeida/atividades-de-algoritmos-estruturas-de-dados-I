@@ -41,7 +41,13 @@ void imprimir(Ingresso * i){
     printf("Atração: %s\n", i->atracao);
 }
 
+void altera_preco (Ingressso *i, float valor){
+
+}
+
 int main(){
+    int op;
+    float valor;
     Ingresso * i = malloc(sizeof(Ingresso));
     printf("Forneça os dados do seu ingresso:");
     divisoria();
@@ -50,5 +56,13 @@ int main(){
     divisoria();
     imprimir(i);
     free(i);
-    return 0;
-}
+    printf("Deseja modificar o valor do ingresso? \n 1-sim \n 2-não");
+    scanf("%d", &op);
+    
+    if(op = 1){
+        printf("alterou");
+    } else{
+        printf("tenha um bom show");
+    }
+    
+    retu

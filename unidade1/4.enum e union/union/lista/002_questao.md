@@ -6,3 +6,4 @@ ELETRONICO. O programa deve ler os dados de um produto e imprimir os dados do pr
 
 ###### *Resposta:* 
 O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
+![Alt text](image-1.png)

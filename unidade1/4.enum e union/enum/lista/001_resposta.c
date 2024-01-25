@@ -1,4 +1,9 @@
+/*Escreva um programa que implementa uma struct Pessoa com os campos nome, idade e gênero. O
+gênero deve ser armazenado como um enum com os valores MASCULINO e FEMININO. O programa
+deve ler os dados de uma pessoa e imprimir os dados da pessoa.*/
+
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef enum genero {
     masculino,
@@ -16,7 +21,7 @@ void get_dados(Pessoa *pessoa) {
     scanf(" %[^\n]", pessoa->nome);
     printf("Informe a idade: \n");
     scanf("%d", &pessoa->idade);
-    printf("Informe o genero (0-masculino, 1-feminino): \n");
+    printf("Informe o genero \n0-masculino \n1-feminino \n");
     scanf("%d", (int *)&pessoa->genero_pessoa);
 }
 
@@ -27,8 +32,8 @@ void imprime_pessoa(Pessoa *pessoa) {
 }
 
 int main() {
-    Pessoa pessoa;
-    get_dados(&pessoa); 
-    imprime_pessoa(&pessoa);
+    Pessoa * pessoa = malloc(sizeof(Pessoa));
+    get_dados(pessoa); 
+    imprime_pessoa(pessoa);
     return 0;
 }
