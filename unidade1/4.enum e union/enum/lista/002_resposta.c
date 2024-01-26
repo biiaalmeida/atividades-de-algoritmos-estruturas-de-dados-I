@@ -5,7 +5,7 @@ ELETRONICO. O programa deve ler os dados de um produto e imprimir os dados do pr
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef enum {
+typedef enum tipo {
     ALIMENTO, 
     BEBIDA,
     ELETRONICO
