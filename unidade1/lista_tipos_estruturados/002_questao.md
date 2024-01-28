@@ -28,3 +28,10 @@ ii) Antes de manipular o vetor de ponteiros, inicialize cada um de seus elemento
 deve escrever um programa (função main) para testar sua implementação.*
 ###### *Resposta:* 
 O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
+![Alt text](image-3.png)   
+![Alt text](image-4.png)   
+![Alt text](image-5.png)   
+![Alt text](image-6.png)   
+![Alt text](image-7.png)   
+![Alt text](image-8.png)   
+![Alt text](image-9.png)   

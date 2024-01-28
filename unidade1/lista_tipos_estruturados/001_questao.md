@@ -17,3 +17,4 @@ e) Escreva uma função main para testar as funções anteriores.
 
 ###### *Resposta:* 
 O código está em outro arquivo nessa pasta, mas aqui está a foto da resolução:
+![Alt text](image.png)
