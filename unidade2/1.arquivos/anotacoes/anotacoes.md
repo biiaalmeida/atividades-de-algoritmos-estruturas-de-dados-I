@@ -27,7 +27,7 @@ b(binário)
 - char* fgets(char* s, int n, FILE* fp); //pega uma string no arquivo 
 - A informação lida é sempre a informação apontada pelo cursor do arquivo;
 
-## *Aula dia 31/01-Tipos abstratos de dados*
+## *Aula dia 31/01*
 
 #### Módulos
 - Ideia central: encapsular de quem usa um determinado tipo a forma concreta com que ele foi implementado
@@ -40,3 +40,7 @@ b(binário)
 #### Exemplo do uso de módulos em C:
 - Arquivo interface: extensão.h (aqui existe só os protótipos das funções implementadas no módulo em questão)
 - O arquivo interface tem que ser documentado, ou seja, tem que ter o que cada função faz
+
+## *Aula dia 05/02-Tipos abstratos de dados*
+- é composta por módulos
+- é um novo tipo (struct)+conjunto de operações
