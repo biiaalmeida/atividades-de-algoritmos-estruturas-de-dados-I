@@ -1,0 +1,10 @@
+Aluno: Bia
+Nota 1: 10.00
+Nota 2: 5.00
+Nota 3: 7.00
+
+Aluno: Clara
+Nota 1: 7.00
+Nota 2: 8.00
+Nota 3: 10.00
+
