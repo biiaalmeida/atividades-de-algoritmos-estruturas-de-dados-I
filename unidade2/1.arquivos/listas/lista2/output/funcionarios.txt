@@ -1,0 +1,10 @@
+Funcionario 1:
+ID: 1
+Nome: bia
+Salario: 333.00
+
+Funcionario 2:
+ID: 5
+Nome: bibao
+Salario: 444.00
+

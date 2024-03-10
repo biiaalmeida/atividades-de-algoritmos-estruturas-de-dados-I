@@ -1,0 +1,10 @@
+Funcionario 1:
+ID: 1
+Nome: bia
+Salario: 345.00
+
+Funcionario 2:
+ID: 2
+Nome: carlos
+Salario: 890.00
+
