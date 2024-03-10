@@ -30,3 +30,25 @@ void imprime(Aluno * aluno){
     printf("Matrícula: %d", estudante->matricula);
     printf("IRA: %f", estudante->IRA);
 }
+
+void libera(Aluno * estudante){
+    free(estudante);
+}
+
+Aluno ** matricula(int quantidade){
+    
+    Aluno ** estudantes = (Aluno **) malloc(quantidade * sizeof(Aluno *));
+
+    if (estudantes == NULL){
+        printf("Sem memória!\n");
+        exit(1);
+    }
+
+    for (int i = 0; i < quantidade; i++){
+        printf("Matriculando aluno %d...\n", i+1);
+        estudantes[i] = recebe_dados();
+        printf("Aluno %d matriculado!\n", i+1);
+    }
+    
+    return estudantes;
+}
