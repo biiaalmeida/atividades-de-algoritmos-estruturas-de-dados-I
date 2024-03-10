@@ -1,2 +1,0 @@
-/*Fa¸ca um programa em C que solicita ao usu´ario informa¸c˜oes de funcion´arios via teclado. As informa¸c˜oes digitadas pelo o usu´ario s˜ao: id, nome e sal´ario do funcion´ario. Armazene as informa¸c˜oes
-digitadas pelo usu´ario em um arquivo texto.*/
